@@ -1,3 +1,6 @@
+@import url('./colors.scss');
+@import url('./utils.scss');
+
 * {
   margin: 0;
   padding: 0;
@@ -16,31 +19,35 @@
   }
 }
 
-:root {
-  --pink-100: #f23764;
-  --pink-800: #f23764;
-  --green-800: #00B863;
-  --gray-300: #A0A0A0;
-  --gray-800: #606660;
-  --black-500: #4E576A;
-  --black-800: #2C2C2C; 
-  --white: #FFF;
-  --white-100: #FCFCFC;
-}
-
 body {
-  background-color: car(--white-100);
+  background-color: var(--white-100);
   color: var(--black-500);
+  font: 400 1rem var(--black-800);
   font-family: "Inter", sans-serif;
 }
 
-body,
 input,
 button,
 select,
 textarea {
   font: 400 1rem var(--black-800);
   font-family: "Inter", sans-serif;
+
+  transition: 0.2s all;
+  border: 1px solid var(--gray-100);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+
+  background-color: var(--white-100);
+
+  &::placeholder {
+    color: var(--gray-200);
+  }
+
+  &:focus {
+    border: 1px solid var(--pink-800);
+    outline: transparent;
+  }
 }
 
 h1,

@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { CompoundInterests } from "./pages/simulators/compoundInterests";
+import { CompoundInterests } from "./pages/simulators/CompoundInterests";
 
 export function AppRoutes() {
   return (
